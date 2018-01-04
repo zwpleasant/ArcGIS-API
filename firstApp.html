@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>My First Mapping Application</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/3.23/esri/css/esri.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.23/dijit/themes/tundra/tundra.css">
+    <style>
+      html, body, #map {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+    <script src="https://js.arcgis.com/3.23/"></script>
+    <script>
+      var map;
+      require(["esri/map", "dojo/domReady!"], function(Map) {
+        map = new Map("map", {
+          basemap: "national-geographic", // sets the basemap that is loaded, numerous options to change
+          center: [-122.45, 37.75], // sets where you want the map to be centered on
+          zoom: 13 // sets the zoom-level when the map is loaded
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>
