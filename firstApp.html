@@ -2,30 +2,23 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 user-scalable=0">
+
     <title>My First Mapping Application</title>
+
     <link rel="stylesheet" href="https://js.arcgis.com/3.23/esri/css/esri.css">
     <link rel="stylesheet" href="https://js.arcgis.com/3.23/dijit/themes/tundra/tundra.css">
-    <style>
-      html, body, #map {
-        height: 100%;
-        padding: 0;
-        margin: 0;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
+
     <script src="https://js.arcgis.com/3.23/"></script>
-    <script>
-      var map;
-      require(["esri/map", "dojo/domReady!"], function(Map) {
-        map = new Map("map", {
-          basemap: "national-geographic", // sets the basemap that is loaded, numerous options to change
-          center: [-122.45, 37.75], // sets where you want the map to be centered on
-          zoom: 13 // sets the zoom-level when the map is loaded
-        });
-      });
-    </script>
+    <script src="mapping.js"></script>
+
   </head>
   <body>
+    <div id="search"></div>
     <div id="map"></div>
   </body>
 </html>
